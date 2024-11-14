@@ -2,16 +2,16 @@
 {
     public class GymClass
     {
-        public int GymClassId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
 
         public DateTime StartTime { get; set; }
         public TimeSpan Duration { get; set; }
         public DateTime EndTime { get { return StartTime + Duration; } }
-        public String Description { get; set; } = String.Empty;
+        public string Description { get; set; } = string.Empty;
 
 
         //navigational property
-        public ICollection<ApplicationUserGymClass> AttendingMembers { get; set; } 
+        //public ICollection<ApplicationUserGymClass> AttendingMembers { get; set; } = default!;
     }
 }
